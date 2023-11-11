@@ -2,16 +2,31 @@
 <html>
 <head>
   <title>Login</title>
-  <%- include('./partials/header') %>
+  <%- include('./partials/navbar') %>
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-  <div class="container">
-    <h1>Login</h1>
-    <!-- Simple login form, no real authentication -->
-    <form action="/dashboard" method="get">
-      <button type="submit">Login</button>
-    </form>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title text-center">Login</h1>
+            <form action="/dashboard" method="get" class="mt-4">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
