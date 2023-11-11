@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-  res.render('dashboard'); 
+  // Assuming you're fetching 'fakeData' from somewhere
+  res.render('dashboard', { title: 'Express', fakeData: yourFakeDataArray });
 });
 
-module.exports = router;
+  module.exports = router;
