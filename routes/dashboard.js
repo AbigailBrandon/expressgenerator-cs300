@@ -36,13 +36,4 @@ router.get('/', function(req, res, next) {
 });
 
 
-
-app.error(function(err, req, res, next){
-    if (err instanceof NotFound) {
-        res.render('404.jade');
-    } else {
-        next(err);
-    }
-});
-
 module.exports = router;
