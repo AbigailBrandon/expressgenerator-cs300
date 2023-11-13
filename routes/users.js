@@ -8,9 +8,9 @@ router.get('/', function(req, res, next) {
 
 // In your profile route
 router.get('/', async function(req, res, next) {
-  // Assuming you have a User model for MongoDB
-  const userProfile = await User.findOne({ username: 'johndoe' }); // Fetch user profile
-  res.render('profile', { user: userProfile }); // Render with EJS
+  // For User model for MongoDB
+  const userUsers = await User.findOne({ username: 'johndoe' }); // Fetch user profile
+  res.render('users', { user: userUsers}); // Render with EJS
 });
 
 module.exports = router;
